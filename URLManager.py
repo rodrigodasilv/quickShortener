@@ -3,7 +3,7 @@ import random
 import string
 import redis
 
-redis_client = redis.Redis(host='localhost', port=6379, charset="utf-8", decode_responses=True)
+redis_client = redis.Redis(host='redis', port=6379, charset="utf-8", decode_responses=True)
 
 
 def get_url(shorter_code):
