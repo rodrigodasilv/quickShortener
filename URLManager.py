@@ -17,7 +17,6 @@ def get_url(shorter_code):
 def create_short_url(url):
     while True:
         shorter_code = create_shorter_code()
-        print(redis_client.get(shorter_code))
         if redis_client.get(shorter_code) is None:
             break
     redis_client.set(shorter_code, url)
